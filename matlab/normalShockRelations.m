@@ -1,10 +1,15 @@
 function [p2p1, po2po1, M2] = normalShockRelations(M1, gamma)
-%ratioPressureNormalShock - This function calculates the pressure ratios across a normal shockwave
+%NORMALSHOCKRELATIONS This function calculates the pressure ratios across a normal shockwave
 % assuming a calorically perfect gas.
 %
-%INPUTS
+% Inputs
 %  M1 - Upstream Mach Number [Real]
 %  gamma - Ratio of specific heats [Real]
+%
+% Outputs
+%  p2p1 - Static pressure ratio across normal shock
+%  po2po1 - Stagnation (total) pressure ratio across normal shock
+%  M2 - Downstream Mach Number across normal shock
 
 % Calculate pressure values
 p2p1 = 1+ 2*(gamma)/(gamma+1).*(M1.^2 -1);
