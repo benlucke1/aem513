@@ -2,7 +2,17 @@ function [beta, theta, mach] = betaThetaMach(theta, mach, gamma, delta)
 %BETATHETAMACH This function calculates the wave angle, beta, of an oblique
 % shock given the deflection angle, theta (in degrees) and the upstream
 % Mach number
-%   Detailed explanation goes here
+%   Inputs:
+%       theta - deflection angle in degrees
+%       mach - upstream mach number of flow
+%       gamma - specific heat ratio, typically 1.4
+%       delta - [0,1] - 0 is strong shock solution, 1 is weak shock
+%       solution
+%
+%   Outputs:
+%       beta - wave angle of oblique shock in degrees
+%       theta - input deflection angle in degrees
+%       mach - input mach number
 t = theta;
 m = mach;
 del = delta;
