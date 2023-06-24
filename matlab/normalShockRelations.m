@@ -11,6 +11,9 @@ function [p2p1, po2po1, M2] = normalShockRelations(M1, gamma)
 %  po2po1 - Stagnation (total) pressure ratio across normal shock
 %  M2 - Downstream Mach Number across normal shock
 
+if nargin < 2
+    gamma = 1.4;
+end
 % Calculate pressure values
 p2p1 = 1+ 2*(gamma)/(gamma+1).*(M1.^2 -1);
 po2po1 = ((0.5*(gamma+1)*M1^2)/(1+0.5*(gamma-1)*M1^2))^(gamma/(gamma-1))*...
