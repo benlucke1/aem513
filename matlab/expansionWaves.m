@@ -20,7 +20,7 @@ if nargin < 1
     error('Error. Please input the Mach number.')
 end
 
-%% Body
+%% MAIN
 g = gamma;
 m = M1;
 

@@ -12,11 +12,14 @@ function [p_p0, t_t0] = isentropicRelations(M, gamma)
 %  t_p0 - Static to stagnation (total) temperature ratio (T/T_0)
 
 if nargin < 2
-    gamma = 1.4
+    gamma = 1.4;
 end
-g = gamma
+g = gamma;
 
-p_p0 = (1+((g-1)/2).*M.^2).^((-1*g)./(g-1))
-t_t0 = (1+((g-1)/2).*M.^2).^(-1)
+p_p0 = (1+((g-1)/2).*M.^2).^((-1*g)./(g-1));
+t_t0 = (1+((g-1)/2).*M.^2).^(-1);
 end
 
+
+%% SOURCE OF EQUATIONS:
+% https://www.grc.nasa.gov/www/k-12/airplane/isentrop.html
