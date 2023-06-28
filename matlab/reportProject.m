@@ -135,12 +135,12 @@ beta_bottom = betaThetaMach(turn_bottom,M_inf,1.4,1);
 % Using the wave angle, we can calculate the normal component of the
 % freestream velocity using Equation (4.7) and the wave angle of the 
 % oblique shock:
-Mn2_bottom = M_inf*sind(beta_bottom);
+Mn1_bottom = M_inf*sind(beta_bottom);
 
 % Next, using the normal shock relations and the Mach number of the flow
 % normal to the oblique shock, we can get the properties of the
 % flow across the oblique shock:
-[p2p1_bottom,po2po1_bottom,Mn2_bottom] = normalShockRelations(Mn2_bottom);
+[p2p1_bottom,po2po1_bottom,Mn2_bottom] = normalShockRelations(Mn1_bottom);
 
 % Using these properties, we can then find the static pressure on the 
 % compression surface:
